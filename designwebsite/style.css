@@ -1,0 +1,557 @@
+@import url('https://fonts.googleapis.com/css2?family=Kablammo&family=Montserrat:ital,wght@0,300;1,200;1,300&family=Nanum+Gothic:wght@800&family=Poiret+One&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Raleway:ital,wght@0,500;0,700;0,800;0,900;1,600&display=swap');
+
+*{
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ font-family: "Poppins", sans-serif;
+ transition: .2s ease-in-out;
+
+}
+html{
+ font-size: 67.5%;
+ scroll-behavior: smooth;
+}
+.flex{
+ display: flex;
+ align-items: center;
+}
+.grid{
+ display: grid;
+}
+.pad{
+ padding: 20px 8%;
+}
+li{
+ list-style: none;
+}
+a{
+ text-decoration: none;
+}
+section{
+ min-height: 100vh;
+}
+.nav{
+ justify-content: space-between;
+ box-shadow: 1px 1px 1px #0000005e;
+ position: fixed;
+ z-index: 10;
+ width: 100%;
+ background-color: #fff;
+}
+.nav ul li{
+ display: inline-block;
+ margin-right: 15px;
+}
+.nav ul li a{
+ font-size: 1.7rem;
+ color: #000;
+}
+.nav i{
+ font-size: 20px;
+ font-weight: 800;
+}
+.btn{
+ border: 1px solid #000;
+ padding: 7px 25px;
+ background-color: #000;
+ color: #fff;
+ font-size: 18px;
+ border-radius: 6px;
+}
+.btn:hover{
+ color: #000;
+ background-color: #fff;
+}
+
+.menu-icon{
+ display: none;
+}
+.home .home-image{
+ flex: 1 1 41rem;
+ width: 100%;
+ animation-name: bounce;
+ animation-duration: 3s;
+ animation-iteration-count: infinite;
+}
+.home{
+flex-wrap: wrap;
+padding-inline: 7%;
+
+}
+.home .home-content{
+ flex: 1 1 41rem;
+}
+.home .home-content h1{
+ font-size: 4rem;
+ margin-bottom: 2rem;
+}
+.home .home-content p{
+ font-size: 1.5rem;
+ margin-bottom: 20px;
+}
+.home .home-content .creative{
+ position: relative;
+ z-index: 1;
+}
+.home .home-content .creative::before{
+ position: absolute;
+ content: "";
+ width: 95%;
+ height: 12px;
+ background-color: blanchedalmond;
+ bottom: 10px;
+ z-index: -1;
+}
+.services{
+ padding-inline: 7%;
+ background-color: blanchedalmond;
+ padding-top: 5rem;
+}
+.services .title{
+ text-align: center;
+ font-size: 2rem;
+}
+.services .title2{
+ text-align: center;
+ font-size: 3rem;
+ margin-bottom: 4rem;
+}
+.services .services-container{
+ display: grid;
+ grid-template-columns: 1fr 1fr 1fr;
+ margin-inline: 2%;
+}
+.services .services-container .services-card{
+ box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.157);
+ margin: 2rem;
+ padding: 40px;
+ text-align: center;
+ background-color: #fff;
+ border-radius: 6px;
+ transition: .4s ease-in-out;
+}
+.services .services-container .services-card:hover{
+ transform: scale(1.1);
+}
+.services .services-container .services-card h1{
+ font-size: 50px;
+}
+.services .services-container .services-card h3{
+ font-size: 20px;
+ margin-bottom: 20px;
+}
+.services .services-container .services-card p{
+ font-size: 1.6rem;
+}
+.about{
+ padding-inline: 7%;
+ flex-wrap: wrap;
+}
+.about .about-image{
+ flex: 1 1 41rem;
+ width: 100%;
+}
+.about .about-content{
+ flex: 1 1 41rem;
+}
+.about .about-content h1{
+ font-size: 4rem;
+ margin-bottom: 2rem;
+}
+.about .about-content .choose{
+ position: relative;
+}
+.about .about-content .choose::before{
+ content: "";
+ position: absolute;
+ bottom: 10px;
+ z-index: -1;
+ background-color: lightseagreen;
+ width: 100%;
+ height: 12px;
+}
+.about .about-content p{
+ font-size: 1.4rem;
+ margin-bottom: 3rem;
+}
+.started{
+ padding-inline: 7%;
+ background-color: lightseagreen;
+ padding-top: 5rem;
+}
+.started h1{
+ text-align: center;
+ font-size: 3rem;
+ font-weight: 400;
+ color: #fff;
+ margin-bottom: 12rem;
+}
+.started h3{
+ text-align: center;
+ font-size: 2rem;
+ font-weight: 300;
+ color: #fff;
+}
+.started .started-container{
+ display: grid;
+ grid-template-columns: 1fr 1fr 1fr;
+ margin-inline: 2%;
+}
+.started .started-container .started-card .started-card-image{
+ width: 120px;
+ height: 120px;
+ border-radius: 50%;
+ margin-bottom: 2rem;
+}
+.started .started-container .started-card {
+ text-align: center;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ flex-direction: column;
+}
+.started .started-container .started-card h4{
+ font-size: 2rem;
+}
+.started .started-container .started-card p{
+ font-size: 1.4rem;
+width: 80%;
+margin-bottom: 20px;
+}
+.started{
+ min-height: 60vh;
+}
+.features{
+ padding-inline: 7%;
+ padding-block: 5rem;
+}
+.features h1{
+ text-align: center;
+ font-size: 4rem;
+ font-weight: 400;
+}
+.features h3{
+ text-align: center;
+ font-size: 3rem;
+ font-weight: 200;
+}
+.features .features-container{
+ flex-wrap: wrap;
+}
+.features .first-container .first-container-image{
+ flex: 1 1 41rem;
+ width: 50%;
+ 
+}
+.features .first-container .first-container-content{
+ flex: 1 1 41rem;
+}
+.features .first-container .first-container-content h1{
+ text-align: left;
+ font-size: 3.5rem;
+ margin-bottom: 2rem;
+}
+.features .first-container .first-container-content p{
+ font-size: 1.5rem;
+ margin-bottom: 2rem;
+ 
+}
+.features .first-container .first-container-content .choose{
+ position: relative;
+ 
+}
+.features .first-container .first-container-content .choose::before{
+ position: absolute;
+ content: "";
+ bottom: 10px;
+ height: 12px;
+ width: 100%;
+ background-color: lightseagreen;
+ z-index: -1;
+}
+.features .second-container .second-container-image{
+ flex: 1 1 41rem;
+ width: 50%;
+ 
+}
+.features .second-container .second-container-content{
+ flex: 1 1 41rem;
+ 
+}
+.features .second-container{
+ flex-direction: row-reverse;
+}
+.features .second-container .second-container-content h1{
+ text-align: left;
+ font-size: 3.5rem;
+ margin-bottom: 2rem;
+}
+.features .second-container .second-container-content p{
+ font-size: 1.5rem;
+ margin-bottom: 2rem;
+ 
+}
+.features .second-container .second-container-content .choose{
+ position: relative;
+ 
+}
+.features .second-container .second-container-content .choose::before{
+ position: absolute;
+ content: "";
+ bottom: 10px;
+ height: 12px;
+ width: 100%;
+ background-color: lightseagreen;
+ z-index: -1;
+}
+.pricing{
+ padding-inline: 7%;
+ padding-top: 5rem;
+ background-color: blanchedalmond;
+ padding-bottom: 5rem;
+}
+.pricing h3{
+ font-weight: 200;
+ font-size: 3rem;
+ text-align: center;
+}
+.pricing h1{
+ font-weight: 600;
+ font-size: 4rem;
+ text-align: center;
+ margin-bottom: 30px;
+}
+.pricing .buttons{
+ text-align: center;
+ border: 2px solid #000;
+ width: 140px;
+ margin: 0 auto;
+ padding-block: 10px;
+ font-size: 1.4rem;
+ cursor: pointer;
+ margin-bottom: 5rem;
+}
+.pricing .buttons .monthly{
+ background-color: #fff;
+ color: #000;
+ padding: 6px;
+}
+.pricing .buttons .monthly.active{
+ background-color: transparent;
+}
+.pricing .buttons .yearly.active{
+ background-color: #000;
+ color: #fff;
+ padding: 6px;
+}
+.pricing .pricing-container{
+ display: grid;
+ grid-template-columns: 1fr 1fr 1fr;
+ grid-gap: 30px;
+}
+.pricing .pricing-container .pricing-card{
+ 
+ background-color: #fff;
+ padding: 100px;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ flex-direction: column;
+}
+.pricing .pricing-container .pricing-card h3{
+ font-size: 3rem;
+ margin-bottom: 2rem;
+ font-weight: 400;
+}
+.pricing .pricing-container .pricing-card ul li{
+ font-size: 2rem;
+ margin-bottom: 2rem;
+}
+.pricing .pricing-container .pricing-card ul li i{
+ font-size: 3rem;
+ margin-right: 20px;
+ vertical-align: middle;
+}
+
+.started{
+ padding-bottom: 5rem;
+}
+.swiper {
+ width: 100%;
+ height: 100%;
+}
+
+.swiper-slide {
+ text-align: center;
+ font-size: 18px;
+ background: #fff;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ margin-bottom: 5rem;
+}
+
+.swiper-slide img {
+ 
+ width: 80px;
+ height: 80px;
+ object-fit: cover;
+ border-radius: 50%;
+}
+
+.swiper {
+ margin-left: auto;
+ margin-right: auto;
+}
+.reviews{
+ padding-top: 5rem;
+ min-height: 60vh;
+}
+.reviews h1{
+ text-align: center;
+ font-size: 4rem;
+ margin-bottom: 5rem;
+}
+.reviews h3{
+ text-align: center;
+ font-size: 3rem;
+}
+.faq{
+ background-color: lightseagreen;
+ padding-top: 5rem;
+ min-height: 70vh;
+}
+.faq .faq-container{
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ flex-direction: column;
+}
+.faq .faq-card{
+ width: 50%;
+ background-color: #fff;
+ margin-block: 5px;
+ padding: 20px;
+}
+.faq .faq-card .faq-question{
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ 
+}
+.faq .faq-card .faq-question h5{
+ font-size: 2rem;
+}
+.faq .faq-card .faq-question i{
+ font-size: 3rem;
+ cursor: pointer;
+}
+.faq .faq-card .faq-content p{
+ font-size: 1.2rem;
+}
+.faq .faq-card .faq-content{
+ display: none;
+}
+.faq .faq-card .faq-content.active{
+ margin-top: 20px;
+ display: inline-block;
+}
+
+
+
+@keyframes bounce{
+ 0%{
+  transform: translateY(1rem);
+ }
+ 50%{
+  transform: translateY(1rem);
+ }
+ 100%{
+  transform: translateY(-1rem);
+ }
+}
+
+@media(max-width:600px){
+ .nav ul li{
+  display: block;
+  padding-block: 5px;
+ }
+ .nav{
+  display: block;
+ }
+ .nav ul{
+  margin-block: 20px;
+  display: none;
+ }
+ .nav .btn{
+  display: none;
+ }
+ i.menu-icon{
+  display: block;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  font-size: 3rem;
+ }
+ nav ul.active{
+  display: block;
+  transition: .4s ease-in-out;
+ }
+ .home{
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+ }
+ .home .home-content h1{
+  font-size: 3rem;
+ }
+ .home .home-content .creative::before{
+  height: 5px;
+  background-color: lightseagreen;
+ }
+ .services{
+  padding-top: 5rem;
+ }
+ .services .services-container{
+  grid-template-columns: 1fr;
+ }
+ .about .about-content h1{
+  font-size: 2.6rem;
+ }
+ .about .about-content .choose::before{
+  height: 6px;
+  bottom: 8px;
+ }
+ .started .started-container{
+  grid-template-columns: 1fr;
+  grid-gap: 20px;
+ }
+ .started .started-container .started-card p{
+  width: 100%;
+ }
+
+ .features .first-container{
+  flex-wrap: wrap;
+  margin-bottom: 100px;
+ }
+ .features .first-container .first-container-image{
+  width: 100%;
+ }
+ .features .second-container{
+  flex-wrap: wrap;
+ }
+ .features .second-container .second-container-image{
+  width: 100%;
+ }
+ .pricing .pricing-container{
+  grid-template-columns: 1fr;
+ }
+ .swiper-button-next,
+.swiper-button-prev{
+ opacity: 0;
+}
+.faq .faq-card{
+ width: 90%;
+}
+}
